@@ -1,0 +1,153 @@
+doctype html
+html(lang='ru')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title Explore Indonesia
+        link(rel='stylesheet' href='./css/style.css')
+
+    body
+        header.header 
+            .logo Explore Indonesia
+            nav
+                ul.nav
+                    li.nav__item About
+                        a(href="#about") 
+                    li.nav__item Destinations
+                        a(href="#destinations") 
+                    li.nav__item Experience 
+                        a(href="#experience") 
+                    li.nav__item Country
+                        a(href="#country") 
+                    li.nav__item Gallery
+                        a(href="#gallery") 
+                    li.nav__item How
+                        a(href="#how") 
+            div.mobileMenu
+                span.mobileMenu__burger
+        main.main
+            section.mainScreen
+                h1.mainScreen__title Explore Indonesia
+                button.btn.jsStart Start travelling
+                .main__mainLine
+                    .list
+                        .list__block.list__block-red 01
+                            p.list__block-title Travel
+                            p Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        .list__block.list__block-red 02
+                            p.list__block-title Enjoy
+                            p Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        .list__block.list__block-red 03
+                            p.list__block-title Live
+                            p Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    .video 
+                        img(src="./css/img/mainVideo" alt="Indonesia beach" width="417px" height="254px") 
+            section.about#about
+                h2.title About
+                .cardCountry 
+                    img(src="./css/img/aboutCountry" alt="Beatiful Indonesia" width="630px" height="460px")
+                    div.cardCountry__text
+                        h3.cardCountry__text-title The walkways of Indonesia spellbind
+                        p.cardCountry__text-info Lorem ipsum dolor sit amet, consectetur adip iscing elit. Fusce commodo magna et libero mollis rhoncus.
+                .cardCountry 
+                    img(src="./css/img/aboutCountry2" alt="Beatiful Indonesia" width="630px" height="460px")
+                    div.cardCountry__text.block
+                        p.cardCountry__text-info Lorem ipsum dolor sit amet, consectetur adip iscing elit. Fusce commodo magna et libero mollis rhoncus.
+                        h3.cardCountry__text-title Perfect beaches exude relaxation and fun 
+            section.destinations#destinations
+                h2.title Explore Our Secrets
+                .slider 
+                    svg.slider__left(xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none")
+                        path(stroke="#000" stroke-linecap="round" stroke-width="24" d="M338 419 175 256 338 93")
+                    div.sliderBlock
+                        img.sliderBlock__photo(src="./css/img/slider" alt="Beatiful Indonesia" width="405px" height="257px")
+                        img.sliderBlock__photo(src="./css/img/slider2" alt="Beatiful Indonesia" width="405px" height="257px")
+                        img.sliderBlock__photo(src="./css/img/slider3" alt="Beatiful Indonesia" width="405px" height="257px")
+                        img.sliderBlock__photo(src="./css/img/slider4" alt="Beatiful Indonesia" width="405px" height="257px")
+                        img.sliderBlock__photo(src="./css/img/slider5" alt="Beatiful Indonesia" width="405px" height="257px")
+                    svg.slider__right(xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none")
+                        path(stroke="#000" stroke-linecap="round" stroke-width="24" d="m175 419 163-163L175 93")
+                .numbers 
+                    h2.title By The Numbers
+                    p.numbers__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    .numbers__info 
+                        p.numbers__info__red 100+
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero.
+                    numbers__info 
+                        p.numbers__info__red 43,000+
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo.
+                    .numbers__info 
+                        p.numbers__info__red 30+
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo magna et libero.
+            section.experience#experience
+                    h2.title.info__title Our hills and valleys are like nothing you’ve seen.
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet magna commodo, tempus dolor sit amet, laoreet elit. Donec mauris tortor.
+                    button.btn.jsStart Start travelling
+            section.country#country
+                h2.title Live a life like you wouldn’t imagine, experience a life you wouldn’t expect.
+                .inThe 
+                    img.inThe__photo(src="./css/img/countryVideo" alt="Indonesia" width="1056px" height="594px")
+                    div.inThe__block
+                        img(src="./css/img/countryVideo2" alt="Beatiful Indonesia" width="233px" height="151px")
+                        p In The Country
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus.
+                    div.block
+                        img(src="./css/img/countryVideo3" alt="Beatiful Indonesia" width="233px" height="151px")
+                        p In The City
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus.
+            section.gallery#gallery 
+                h2.title Photo Gallery
+                p.gallery__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt.
+                .galleryCountry 
+                    img.galleryOne(src="./css/img/gallery" alt="Beatiful Indonesia")
+                    img.gallerySecond(src="./css/img/gallery2" alt="Beatiful Indonesia")
+                    img.galleryThree(src="./css/img/gallery3" alt="Beatiful Indonesia")
+                    img.galleryFour(src="./css/img/gallery4" alt="Beatiful Indonesia")
+                    img.galleryFive(src="./css/img/gallery5" alt="Beatiful Indonesia")
+                    img.gallerySix(src="./css/img/gallery6" alt="Beatiful Indonesia")
+            section.how#how 
+                h2.title Getting there
+                .how__container 
+                    ol 
+                        li.howList Bookings your flights
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus varius. Sed euismod orci dictum faucibus malesuada. Praesent sed eros tincidunt, viverra neque auctor, lobortis enim.
+                        li.howList Choosing your hotel
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus varius. Sed euismod orci dictum faucibus malesuada. Praesent sed eros tincidunt, viverra neque auctor, lobortis enim.
+                        li.howList Planning your experiences
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus mauris in lectus tempus, eget tincidunt lacus varius. 
+        footer.footer 
+            .logo.logoFooter Explore Indonesia
+            nav.nav.navFooter
+                ul
+                    li.nav__item About
+                        a(href="#about") 
+                    li.nav__item Destinations
+                        a(href="#destinations") 
+                    li.nav__item Experience 
+                        a(href="#experience") 
+                    li.nav__item Country
+                        a(href="#country") 
+                    li.nav__item Gallery
+                        a(href="#gallery") 
+                    li.nav__item How
+                        a(href="#how") 
+            .social
+                ul
+                    li.social__item
+                        a fb
+                    li.social__item
+                        a in
+                    li.social__item
+                        a g
+        scroll 
+            svg(xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none")
+                path(stroke="#fff", stroke-linecap="round", stroke-width="24", d="m419.5 337.5-163-163-163 163")
+        .modal
+            .modal__content
+                span.close Fill out the application and our manager will contact you to find out about travel
+                h3.modal__content-title 
+                form.forma(action="")
+                    input.forma__input(type="text" name="name" placeholder="Your name")
+                    input.forma__input(type="tel" name="tel" placeholder="Your phone")
+                    input.btn.jsSend(type="submitt" value="Send")
+        script(src="./js/script.js")
