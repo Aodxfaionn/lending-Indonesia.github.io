@@ -108,8 +108,10 @@ footer {
 }
 
 .header {
-  @include flex(10%);
-  padding-left: 50px;
+  @include flex(70px);
+  flex-wrap: nowrap;
+  padding: 0 50px;
+  justify-content: space-around;
   height: 100px;
   text-transform: uppercase;
   position: relative;
@@ -117,7 +119,7 @@ footer {
 }
 
 .logo {
-  width: 150px;
+  width: 100px;
   font-family: "Roboto";
   font-weight: 900;
   font-size: 1.5em;
@@ -127,7 +129,7 @@ footer {
   @include flex(60px);
   font-weight: 700;
   font-size: 1.125em;
-  line-height: 23px;
+  line-height: 5px;
 }
 
 .footer {
@@ -154,6 +156,7 @@ footer {
 
 .mainScreen {
   background-image: url(./img/mainScreen.jpg);
+  background-size: cover;
   max-width: 1920px;
   height: 1080px;
   position: relative;
@@ -162,7 +165,7 @@ footer {
     font-family: "Roboto";
     font-style: normal;
     font-weight: 900;
-    font-size: 7.5em;
+    font-size: calc(1.5rem + 6vw);
     line-height: 130px;
     text-transform: uppercase;
     padding: 13% 0 0 8%;
@@ -180,16 +183,16 @@ footer {
 }
 
 .list {
-  @include flex(30px);
+  @include flex(0);
   justify-content: space-between;
   background: rgba(0, 0, 0, 0.6);
   height: 210px;
   width: 60%;
-  padding: 0 70px;
+  padding: 0 30px;
   margin-bottom: 4px;
   align-self: flex-end;
   &__block {
-    flex-basis: 25%;
+    flex-basis: 30%;
     font-size: 1.125em;
     line-height: 28px;
     letter-spacing: 0.5px;
@@ -264,12 +267,22 @@ footer {
 
 .slider {
   margin: 50px auto;
-  max-width: 1380px;
+  max-width: 1370px;
   @include flex(20px);
+  flex-wrap: nowrap;
+}
+
+.sliderContainer {
+  overflow: hidden;
+  position: relative;
 }
 
 .sliderBlock {
-  @include flex(20px);
+  transition: all 0.5s ease;
+  @include flex(30px);
+  flex-wrap: nowrap;
+  position: relative;
+  left: 0;
   &__photo {
     max-width: 405px;
     max-height: 257px;
@@ -403,7 +416,7 @@ footer {
 }
 
 .galleryCountry {
-  margin: 50px auto;
+  margin: 50px auto 0;
   display: grid;
   max-width: 1150px;
   gap: 30px;
@@ -509,7 +522,7 @@ footer {
   align-items: center;
   justify-content: center;
   position: fixed;
-  z-index: 1;
+  z-index: 5;
   left: 0;
   top: 0;
   width: 100%;
@@ -595,18 +608,83 @@ footer {
   display: flex;
 }
 
-@media only screen and (max-width: 376px) {
+@media (max-width: 1250px) {
+  .nav {
+    gap: 15px;
+  }
+  .mainScreen {
+    height: 900px;
+    &__mainLine {
+      bottom: 0;
+    }
+  }
+  .video {
+    display: none;
+  }
+  .list {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .mainScreen {
+    height: 700px;
+    &__title {
+      width: auto;
+      padding-top: 25%;
+      line-height: 60px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
   .nav {
     display: none;
   }
-  .mobileMenu__burger {
-    width: 24px;
-    height: 3px;
+  .nav.open {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-weight: 400;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    text-align: center;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    & li {
+      border-bottom: 1px solid #dce8f2;
+      padding: 15px;
+      width: 100%;
+      &:first-of-type {
+        padding-top: 32px;
+      }
+    }
+  }
+  .mobileMenu {
+    position: relative;
+    left: 50px;
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+  &__burger {
+    width: 40px;
+    height: 4px;
     background-color: #ffffff;
-    display: block;
-    margin: 6px;
     transition: all 0.3s ease-in-out;
     border-radius: 5px;
-    cursor: pointer;
+  }
+}
+  .mobileMenu.active .mobileMenu__burger:nth-of-type(1) {
+    display: none;
+  }
+  .mobileMenu.active .mobileMenu__burger:nth-of-type(2) {
+    transform: rotate(45deg);
+  }
+  .mobileMenu.active .mobileMenu__burger:nth-of-type(3) {
+    transform: rotate(-45deg);
+    margin-top: -12px;
   }
 }
