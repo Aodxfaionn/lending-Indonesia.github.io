@@ -273,7 +273,7 @@ footer {
 
 .slider {
   margin: 50px auto;
-  max-width: 1345px;
+  max-width: 1375px;
   @include flex(20px);
   flex-wrap: nowrap;
 }
@@ -345,7 +345,7 @@ footer {
 .experience {
   background-image: url(./img/info.jpg);
   flex-wrap: nowrap;
-  height: 820px;
+  height: 665px;
   @include flex(30px);
   flex-direction: column;
   justify-content: center;
@@ -613,9 +613,6 @@ footer {
   }
   .destinations {
     height: 1680px;
-  }
-  .experience {
-    height: 700px;
   }
 }
 @media (max-width: 1400px) {
