@@ -31,6 +31,7 @@ body {
   max-width: 1920px;
   margin: 0 auto;
   overflow-x: hidden;
+  scroll-behavior: auto;
 }
 
 li {
@@ -279,7 +280,7 @@ footer {
 
 .slider {
   margin: 50px auto;
-  max-width: 1345px;
+  max-width: 1375px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -360,7 +361,7 @@ footer {
 .experience {
   background-image: url(./img/info.jpg);
   flex-wrap: nowrap;
-  height: 820px;
+  height: 665px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -370,12 +371,12 @@ footer {
   text-align: center;
 }
 .experience__title {
-  line-height: 50px;
+  line-height: 75px;
   max-width: 50%;
   padding: 0;
 }
 .experience__text {
-  max-width: 40%;
+  max-width: 60%;
   font-size: 18px;
   line-height: 28px;
   letter-spacing: 0.5px;
@@ -546,7 +547,7 @@ footer {
 .modal__content {
   background-color: #e0e0e0;
   padding: 50px;
-  width: 30%;
+  width: 400px;
   height: -moz-min-content;
   height: min-content;
   border-radius: 20px;
@@ -643,9 +644,6 @@ footer {
   }
   .destinations {
     height: 1680px;
-  }
-  .experience {
-    height: 700px;
   }
 }
 @media (max-width: 1400px) {
@@ -913,5 +911,9 @@ footer {
   .galleryCountry {
     grid-template-columns: repeat(2, 180px);
     grid-template-rows: repeat(6, minmax(50px, 110px));
+  }
+  .modal__content {
+    width: 90%;
+    padding: 35px;
   }
 }/*# sourceMappingURL=style.css.map */
