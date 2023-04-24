@@ -1,5 +1,5 @@
 Лендинг Explore Indonesia
-<img src="https://ibb.co/X52ZSJH" alt="демо проекта">
+<img src="https://i.ibb.co/3FryBhK/image.jpg" alt="Демо проекта">
 <p>Ссылка на проект: https://aodxfaionn.github.io/lending-Indonesia.github.io </p>
 <p>Функционал: одностраничный лендинг с информацией про страну и формой заявки.</p>
 <p>HTML: верстка по БЭМ с использованием шаблонизатора PUG.</p>
