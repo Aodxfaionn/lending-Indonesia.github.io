@@ -32,6 +32,7 @@ window.addEventListener("keydown", function (e) {
   }
 });
 
+
 // Маска телефона
 document.addEventListener("DOMContentLoaded", function () {
   var eventCalllback = function (e) {

@@ -50,7 +50,7 @@ body {
   max-width: 1920px;
   margin: 0 auto;
   overflow-x: hidden;
-  scroll-behavior: auto;
+  scroll-behavior: smooth;
 }
 
 li {
@@ -506,7 +506,7 @@ footer {
 
 // Модальное окно
 .modal {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -517,7 +517,10 @@ footer {
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.8);
-  animation: color 0.5s ease;
+  opacity: 0;
+  transform: scale(1.15);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  pointer-events: none;
   &__content {
     background-color: #e0e0e0;
     padding: 50px;
@@ -532,13 +535,12 @@ footer {
   }
 }
 
-@keyframes color {
-  0% {
-    background-color: rgba(0, 0, 0, 0);
-  }
-  100% {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
+.modal.open {
+  pointer-events: auto;
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  z-index: 10;
 }
 
 .close {
@@ -760,10 +762,8 @@ footer {
     height: 1210px;
   }
   .nav {
-    display: none;
-  }
-  .nav.open {
-    display: flex;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
     flex-direction: column;
     gap: 20px;
     background-color: rgba(0, 0, 0, 0.8);
@@ -773,22 +773,28 @@ footer {
     right: 0;
     text-align: center;
     width: 100%;
-    transition: all 0.3s ease-in-out;
     & li {
       border-bottom: 1px solid #dce8f2;
-      padding: 15px;
+      padding: 13px;
       width: 100%;
       &:first-of-type {
-        padding-top: 32px;
+        padding-top: 36px;
       }
     }
+  }
+  .nav.open {
+    transform: translateX(0%);
+    transition: transform 0.5s ease;
   }
   .logo {
     display: none;
   }
+  .footer .logo {
+    display: block;
+  }
   .mobileMenu {
-    position: relative;
-    left: 40px;
+    position: absolute;
+    left: 30px;
     cursor: pointer;
     display: flex;
     gap: 8px;
@@ -797,15 +803,18 @@ footer {
       width: 40px;
       height: 4px;
       background-color: #ffffff;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.5s ease;
       border-radius: 5px;
+    }
+    &.active {
+      transition: all 0.5s ease;
     }
   }
   .mobileMenu.active .mobileMenu__burger:nth-of-type(1) {
-    display: none;
+    transform: rotate(45deg);
   }
   .mobileMenu.active .mobileMenu__burger:nth-of-type(2) {
-    transform: rotate(45deg);
+    display: none;
   }
   .mobileMenu.active .mobileMenu__burger:nth-of-type(3) {
     transform: rotate(-45deg);
@@ -889,9 +898,9 @@ footer {
   .galleryCountry {
     grid-template-columns: repeat(2, 180px);
     grid-template-rows: repeat(6, minmax(50px, 110px));
-}
-.modal__content {
-  width: 90%;
-  padding: 35px;
-}
+  }
+  .modal__content {
+    width: 90%;
+    padding: 35px;
+  }
 }
