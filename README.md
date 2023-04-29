@@ -1,6 +1,6 @@
 <img src="https://i.ibb.co/3FryBhK/image.jpg" alt="Демо проекта">
 <p>Лендинг Explore Indonesia</p>
-<p>Ссылка на проект: https://aodxfaionn.github.io/lending-Indonesia.github.io </p>
+<p>Ссылка на проект: https://aodxfaionn.github.io/lending-Indonesia.github.io/ </p>
 <p>Функционал: одностраничный лендинг с информацией про страну и формой заявки.</p>
 <p>HTML: верстка по БЭМ с использованием шаблонизатора PUG.</p>
 <p>CSS: использован препроцессор SCSS. Дизайн адаптирован под все экраны, в нем применяются флексы, гриды и чуть-чуть анимации.</p>
