@@ -29,8 +29,8 @@ body {
   background: linear-gradient(180deg, #010a20 0%, rgba(1, 10, 32, 0) 100%);
   width: 100vw;
   max-width: 1920px;
+  min-width: 350px;
   margin: 0 auto;
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -302,6 +302,10 @@ footer {
   flex-wrap: nowrap;
   position: relative;
   left: 0;
+}
+.sliderBlock__photo {
+  width: 450px;
+  height: 255px;
 }
 
 .arrow {
@@ -713,11 +717,11 @@ footer {
   .slider {
     max-width: 510px;
   }
-  .destinations img {
-    margin-right: -20px;
-  }
   .btn {
     height: 60px;
+  }
+  .experience {
+    flex-wrap: nowrap;
   }
 }
 @media (max-width: 800px) {
@@ -759,6 +763,9 @@ footer {
   }
 }
 @media (max-width: 700px) {
+  .scroll {
+    right: 50px;
+  }
   .header {
     padding: 0;
   }
@@ -767,9 +774,6 @@ footer {
   }
   .list__block-red {
     font-weight: 400;
-  }
-  .experience {
-    flex-wrap: nowrap;
   }
   .experience__title {
     max-width: 90%;
@@ -907,6 +911,9 @@ footer {
   .country__title {
     line-height: 50px;
   }
+  .sliderBlock__photo {
+    margin-left: -5px;
+  }
 }
 @media (max-width: 480px) {
   .howList__item::before {
@@ -925,5 +932,17 @@ footer {
   .modal__content {
     width: 90%;
     padding: 35px;
+  }
+}
+@media (max-width: 400px) {
+  .howList__item {
+    display: flex;
+    flex-direction: column;
+  }
+  .howList__item-mainText {
+    margin-top: 0;
+  }
+  .howList__item-titleText {
+    margin-left: 0;
   }
 }/*# sourceMappingURL=style.css.map */
