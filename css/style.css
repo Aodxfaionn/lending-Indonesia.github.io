@@ -763,9 +763,6 @@ footer {
   }
 }
 @media (max-width: 700px) {
-  .scroll {
-    right: 50px;
-  }
   .header {
     padding: 0;
   }
@@ -886,6 +883,9 @@ footer {
   }
 }
 @media (max-width: 500px) {
+  .scroll {
+    right: 5px;
+  }
   .mainScreen__mainLine {
     bottom: 15%;
   }
