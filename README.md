@@ -1,4 +1,4 @@
-<img src="https://i.ibb.co/3FryBhK/image.jpg" alt="Демо проекта">
+<img src="https://i.ibb.co/Wy5HMHM/2023-09-04-22-35-04.png" alt="Демо проекта">
 <p>Лендинг Explore Indonesia</p>
 <p>Ссылка на проект: https://aodxfaionn.github.io/lending-Indonesia.github.io/ </p>
 <p>Функционал: одностраничный лендинг с информацией про страну и формой заявки.</p>
