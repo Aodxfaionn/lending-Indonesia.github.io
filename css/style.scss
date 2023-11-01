@@ -54,7 +54,7 @@ li {
 a {
   cursor: pointer;
   text-decoration: none;
-  transition: 0.3s all ease;
+  transition: 0.3s;
   color: #fff;
 }
 
@@ -85,9 +85,10 @@ footer {
   border-radius: 210px;
   font-weight: 700;
   font-size: 1.25em;
+  font-family: "DM Sans";
   color: #fff;
   border: 0;
-  transition: 0.5s all ease;
+  transition: 0.5s;
   cursor: pointer;
   &:hover {
     box-shadow: 1px 1px 5px #000;
@@ -260,6 +261,7 @@ footer {
   height: 2200px;
   background: url(./img/destinations.jpg);
   background-size: cover;
+  background-position: center;
   position: relative;
   & img {
     border-radius: 15px;
@@ -279,20 +281,22 @@ footer {
 }
 
 .sliderBlock {
-  transition: all 0.5s ease;
-  @include flex(30px);
+  transition: 0.5s;
+  @include flex(0px);
   flex-wrap: nowrap;
   position: relative;
   left: 0;
   &__photo {
-    width: 450px;
-    height: 255px;
+    width: 400px;
+  }
+  &__photo {
+    margin: 0 15px 0 15px;
   }
 }
 
 .arrow {
   cursor: pointer;
-  transition: 0.5s all ease;
+  transition: 0.5s;
   min-width: 30px;
   min-height: 30px;
   &:hover {
@@ -556,12 +560,15 @@ footer {
   flex-direction: column;
   margin-top: 30px;
   &__input {
-    background-color: #e0e0e0;
-    border: 0;
-    border-bottom: 1px solid #000;
     width: 100%;
     height: 40px;
     padding: 10px;
+    background-color: #e0e0e0;
+    border: 0;
+    border-bottom: 1px solid #000;
+    font-weight: 400;
+    font-family: "Roboto";
+    color: #0e0e0e;
     &::placeholder {
       background-color: #e0e0e0;
     }
@@ -585,7 +592,7 @@ footer {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: 0.3s all ease;
+  transition: 0.3s;
   position: fixed;
   bottom: 100px;
   right: 100px;
@@ -680,13 +687,16 @@ footer {
     }
   }
   .slider {
-    max-width: 510px;
+    max-width: 520px;
   }
   .btn {
     height: 60px;
   }
   .experience {
     flex-wrap: nowrap;
+  }
+  .sliderBlock__photo {
+    margin: 0 16px 0 16px;
   }
 }
 
@@ -797,11 +807,11 @@ footer {
       width: 40px;
       height: 4px;
       background-color: #ffffff;
-      transition: all 0.5s ease;
+      transition: 0.5s;
       border-radius: 5px;
     }
     &.active {
-      transition: all 0.5s ease;
+      transition: 0.5s;
     }
   }
   .mobileMenu.active .mobileMenu__burger:nth-of-type(1) {
@@ -880,8 +890,15 @@ footer {
   .country__title {
     line-height: 50px;
   }
-  .sliderBlock__photo {
-    margin-left: -5px;
+  .slider {
+    gap: 10px;
+  }
+  .country__photo:first-of-type {
+    display: none;
+  }
+  .destinations img {
+    position: relative;
+    left: -10px;
   }
 }
 
@@ -903,6 +920,10 @@ footer {
     width: 90%;
     padding: 35px;
   }
+  .destinations img {
+    position: relative;
+    left: -30px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -915,5 +936,18 @@ footer {
     &-titleText {
       margin-left: 0;
     }
+  }
+  .destinations img {
+    position: relative;
+    left: -75px;
+  }
+
+}
+.appearance {
+  transform: translateX(-100%);
+  transition: 0.5s;
+  &.active {
+    transform: translateX(0);
+    transition: 0.5s;
   }
 }

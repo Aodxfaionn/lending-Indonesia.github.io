@@ -18,9 +18,7 @@ let sreen = document.querySelector(".mainScreen");
 function bgChange() {
   sreen.style.backgroundImage = "url(" + backgrounds[index] + ")";
   index++;
-  if (index >= backgrounds.length) {
-    index = 0;
-  }
+  if (index >= backgrounds.length) index = 0;
 }
 bgChange();
 window.setInterval(bgChange, 15000);

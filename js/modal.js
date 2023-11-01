@@ -3,9 +3,7 @@ const modal = document.querySelector("#modal"),
   textModal = document.querySelector(".modal__content-title");
 
 for (btnForm of btnsForm) {
-  btnForm.addEventListener("click", function (e) {
-    modal.classList.add("open");
-  });
+  btnForm.addEventListener("click", (e) => modal.classList.add("open"));
 }
 
 modal.addEventListener("click", function (e) {
@@ -13,25 +11,15 @@ modal.addEventListener("click", function (e) {
   let name = modal.querySelector("[name='name']"),
     tel = modal.querySelector("[name='tel']"),
     form = modal.querySelector("form");
-  if (e.target == modal || e.target.closest(".close")) {
-    modal.classList.remove("open");
-  }
+  if (e.target == modal || e.target.closest(".close")) modal.classList.remove("open");
   if (e.target.closest(".btn")) {
-    if (name.value == "" || tel.value == "") {
-      textModal.innerHTML = `Please, fill in all fields.`;
-    } else {
+    if (name.value == "" || tel.value == "") textModal.innerHTML = `Please, fill in all fields.`;
+    else {
       textModal.innerHTML = `${name.value}, your application has been submitted.`;
       form.style.display = "none";
     }
   }
 });
-
-window.addEventListener("keydown", function (e) {
-  if (e.keyCode === 27) {
-    modal.classList.remove("open");
-  }
-});
-
 
 // Маска телефона
 document.addEventListener("DOMContentLoaded", function () {
